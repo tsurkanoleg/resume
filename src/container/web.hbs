@@ -1,0 +1,62 @@
+<div>
+    <main>
+        <section>
+             {{> title data= "Web" big=true}}
+        </section>
+        <section>
+            {{#with web}} 
+                <ul>
+                    {{#each languages}} 
+                        <li>{{name}}</li>
+                        <li>{{version}}</li>
+                        <li>{{description}}</li>
+                        <hr>
+                        <ul>
+                            {{#each elements}}
+                                <li>{{name}}</li>
+                                <li>{{description}}</li>
+                                    <ul>
+                                        {{#each attributes}}
+                                        <li>{{name}}</li>
+                                        <li>{{description}}</li>
+                                        <br>
+                                        {{/each}}
+                                    </ul>
+                            {{/each}}
+
+                           
+                            <ul>
+                                {{#each properties}}                                 
+                                    <li>{{name}}</li>
+                                    <li>{{description}}</li>
+                                    <ul>
+                                        {{#each values}} 
+                                        <li>{{value}}</li>
+                                        <li>{{description}}</li>
+                                        <hr>
+                                        {{/each}}
+                                    </ul>
+                                {{/each}}
+                            </ul>
+
+                            <ul>
+                                {{#each functions}} 
+                                     <li>{{name}}</li>
+                                    <li>{{description}}</li>
+                                    <ul>
+                                        {{#each parameters}} 
+                                            <li>{{name}}</li>
+                                            <li>{{type}}</li>
+                                            <li>{{description}}</li>
+                                        <hr>
+                                        {{/each}}
+                                    </ul>
+                                {{/each}}
+                            </ul>
+                        </ul>
+                    {{/each}}
+                </ul>
+            {{/with}}
+        </section>
+    </main>
+</div>
