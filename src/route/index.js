@@ -76,6 +76,7 @@ router.get('/summary', function (req, res) {
 })
 
 // ================================================================
+
 router.get('/skills', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render("skills", {
@@ -141,6 +142,9 @@ router.get('/skills', function (req, res) {
     footer,
   })
 })
+// ================================================================
+
+// ================================================================
 
 router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -202,6 +206,9 @@ router.get('/education', function (req, res) {
     footer,
   })
 })
+// ================================================================
+
+// ================================================================
 
 router.get('/work', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -209,7 +216,7 @@ router.get('/work', function (req, res) {
     layout: 'basic',
     // ↙ сюди вводимо JSON дані
 
-    layout: 'big',
+    layout: 'basic',
 
     Page: {
       title: 'Resume | Work',
@@ -268,6 +275,7 @@ router.get('/work', function (req, res) {
 })
 
 // ================================================================
+
 
 
 
@@ -579,6 +587,8 @@ router.get('/program', function (req, res) {
 
 
 
+
+
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
@@ -708,5 +718,7 @@ router.get('/web', function (req, res) {
 })
 
 // ================================================================
+
+
 // Підключаємо роутер до бек-енду
 module.exports = router
