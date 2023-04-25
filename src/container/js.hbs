@@ -1,0 +1,58 @@
+<div>
+    <main>
+        <section>
+            {{> title data= "js" big=true}}
+
+            <div>
+                {{name}} <br>
+                {{description}} <br>
+                <ul>
+                    {{#with history}} 
+                        <li> {{year}} </li>
+                        <li> {{founder}} </li>
+                    {{/with}}
+                    <hr>
+                    {{#each types}} 
+                        <li> {{this}} </li>
+                    {{/each}}
+
+                    <hr>
+
+                    {{#with syntax}} 
+                        <li> {{variables}} </li>
+                        <li> {{functions}} </li>
+                        <li> {{conditionals}} </li>
+                        <li> {{loops}} </li>
+                        <li> {{classes}} </li>
+                    {{/with}}
+
+                    <hr>
+
+                    {{#each features}} 
+                        <li> {{this}} </li>
+                    {{/each}}
+
+                    <hr>
+                     {{#each libraries}} 
+                        <li> {{this}} </li>
+                    {{/each}}
+
+                    <hr>
+                     {{#each tools}} 
+                        <li> {{this}} </li>
+                    {{/each}}
+
+                    <hr>
+
+                    {{#each community}} 
+                        <li> {{name}} </li>
+                        <li> {{type}} </li>
+                        <hr>
+                    {{/each}}
+
+
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
