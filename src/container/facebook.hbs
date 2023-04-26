@@ -1,0 +1,81 @@
+<div>
+    <main>
+        <section>
+            {{> title data= "Facebook" big=true}}
+
+            {{name}} <br>
+            <ul>
+                <hr>
+                {{#each users}}
+                    <li>{{id}}</li>
+                    <li>{{name}}</li>
+                    <li>{{gender}}</li>
+                    <li>{{age}}</li>
+                    <hr>
+
+                        <ul>
+                            {{#each friends}}
+                                <li>{{id}}</li>
+                                <li>{{name}}</li>
+                                <li>{{gender}}</li>
+                                <li>{{age}}</li>
+                                <hr>
+                                <ul>
+                                    {{#each mutual_friends}}
+                                        <li>{{id}}</li>
+                                        <li>{{name}}</li>
+                                        <li>{{gender}}</li>
+                                        <li>{{age}}</li>
+                                        <hr>
+                                        <ul>
+                                                {{#each mutual_friends}}
+                                                <li>{{id}}</li>
+                                                <li>{{name}}</li>
+                                                <li>{{gender}}</li>
+                                                <li>{{age}}</li>
+                                                <hr>
+                                                                                            
+                                            {{/each}}
+                                        </ul>                                            
+                                    {{/each}}
+                                </ul>
+                                <hr>
+                                {{#each groups}} 
+                                    <li>{{id}}</li>
+                                    <li>{{name}}</li>
+                                    <li>{{description}}</li>
+                                    <hr>
+                                        <ul>
+                                            {{#each members}}
+                                                <li>{{id}}</li>
+                                                <li>{{name}}</li>
+                                                <li>{{gender}}</li>
+                                                <li>{{age}}</li>
+                                                <hr>
+                                            {{/each}}
+                                        </ul>
+                                {{/each}}
+                            {{/each}}
+                        </ul>
+                
+
+                    {{#each groups}} 
+                        <li>{{id}}</li>
+                        <li>{{name}}</li>
+                        <li>{{description}}</li>
+                        <hr>
+                            <ul>
+                                {{#each members}}
+                                    <li>{{id}}</li>
+                                    <li>{{name}}</li>
+                                    <li>{{gender}}</li>
+                                    <li>{{age}}</li>
+                                    <hr>
+                                {{/each}}
+                            </ul>
+                    {{/each}}
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+</div>
