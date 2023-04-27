@@ -5,14 +5,15 @@
             {{> title data= "jss" big=true}}
     
             <div>
-                {{name}} <br>
-                {{description}} <br>
+                <p> name:{{name}}</p> <br>
+                <p>description:{{description}}</p> <br>
                 
                 <ul>
                     <div>history</div>
                     {{#with history}}
-                        <li> {{year}} </li>
-                        <li> {{founder}} </li>
+                    <div>
+                        <li> year:{{year}} </li>
+                        <li>founder: {{founder}} </li>
                     {{/with}}
                 </ul>
                 <hr>
@@ -66,8 +67,8 @@
                 <ul>
                     <div>community</div>
                     {{#each community}}
-                        <li> {{name}} </li>
-                        <li> {{type}} </li>
+                        <li> name:{{name}} </li>
+                        <li> type:{{type}} </li>
                         <hr>
                     {{/each}}
                 </ul>
