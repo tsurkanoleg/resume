@@ -8,79 +8,98 @@
                 {{price}} <br>
                 {{category}} <br>
             </div>
-
+                    <hr>
             <div>
                 <ul>
-                    {{#with  features.processor}} 
-                        <li> {{brand}} </li>
-                        <li> {{model}} </li>
-                        <li> {{speed}} </li>
-                        <li> {{cores}} </li>
-                        <li> {{cache}} </li>
-                    {{/with}}
-                    <hr>
-                    {{#with  features.memory}} 
-                        <li> {{type}} </li>
-                        <li> {{size}} </li>
-                        <li> {{speed}} </li>                        
-                    {{/with}}
-                    <hr>
-                    {{#with  features.storage}} 
-                        <li> {{type}} </li>
-                        <li> {{size}} </li>                                               
-                    {{/with}}
-                    <hr>
-                     {{#with  features.display}} 
-                        <li> {{size}} </li>
-                        <li> {{resolution}} </li>
-                        <li> {{technology}} </li>
-                        <li> {{color_space}} </li>
-                        <li> {{brightness}} </li>
-                        <li> {{refresh_rate}} </li>
-                    {{/with}}
-                    <hr>
-                    {{#with  features.graphics}} 
-                        <li> {{brand}} </li>
-                        <li> {{model}} </li>
-                        <li> {{memory}} </li>                        
-                    {{/with}}
-                    <hr>
-                   
-                        {{#each features.ports}}
-                            <li> {{type}} </li>
-                            <li> {{count}} </li>
-                            <ul>
-                                {{#each features}}
-                                    <li> {{this}} </li>
-                                    <hr>
-                                {{/each}}
-                            </ul>                            
-                        {{/each}}
-                        <hr>                        
-                    </ul>
-                    
-
-                    {{#with features.battery}} 
-                        <li> {{type}} </li>
-                        <li> {{capacity}} </li>
-                        <li> {{life}} </li>
-                    {{/with}}
-
-                    <hr>
-                    {{weight}} <br>
-                    {{#with features.dimensions}} 
-                        <li> {{height}} </li>
-                        <li> {{width}} </li>
-                        <li> {{depth}} </li>
-                    {{/with}}
-
-                    {{operating_system}} <br>
-
-                    {{#each features.accessories}} 
-                        <li> {{name}} </li>
-                        <li> {{price}} </li>
+                    {{#with features}}
+                        <ul>
+                            {{#with  processor}}
+                                <li> {{brand}} </li>
+                                <li> {{model}} </li>
+                                <li> {{speed}} </li>
+                                <li> {{cores}} </li>
+                                <li> {{cache}} </li>
+                            {{/with}}
+                        </ul>
                         <hr>
-                    {{/each}}
+                        <ul>
+                            {{#with  memory}}
+                                <li> {{type}} </li>
+                                <li> {{size}} </li>
+                                <li> {{speed}} </li>
+                            {{/with}}
+                        </ul>
+                        <hr>
+                        <ul>
+                            {{#with  storage}}
+                                <li> {{type}} </li>
+                                <li> {{size}} </li>
+                            {{/with}}
+                        </ul>
+                        <hr>
+                        <ul>
+                            {{#with  fdisplay}}
+                                <li> {{size}} </li>
+                                <li> {{resolution}} </li>
+                                <li> {{technology}} </li>
+                                <li> {{color_space}} </li>
+                                <li> {{brightness}} </li>
+                                <li> {{refresh_rate}} </li>
+                            {{/with}}
+                        </ul>
+                        <hr>
+                        <ul>
+                            {{#with  graphics}}
+                                <li> {{brand}} </li>
+                                <li> {{model}} </li>
+                                <li> {{memory}} </li>
+                            {{/with}}
+                        </ul>
+                        <hr>
+                    
+                        <ul>
+                            {{#each ports}}
+                                <li> {{type}} </li>
+                                <li> {{count}} </li>
+                                <ul>
+                                    {{#each features}}
+                                        <li> {{this}} </li>
+                                        <hr>
+                                    {{/each}}
+                                </ul>
+                            {{/each}}
+                            <hr>
+                        </ul>                  
+                        
+                        
+                        <ul>    
+                            {{#with battery}}
+                                <li> {{type}} </li>
+                                <li> {{capacity}} </li>
+                                <li> {{life}} </li>
+                            {{/with}}
+                        </ul>
+
+                        <hr>
+                        {{weight}} <br>
+                        <ul>
+                            {{#with dimensions}}
+                                <li> {{height}} </li>
+                                <li> {{width}} </li>
+                                <li> {{depth}} </li>
+                            {{/with}}
+                        </ul>
+                        <hr>
+                        <br>
+                        {{operating_system}} <br>
+                        <ul>    
+                            {{#each accessories}}
+                                <li> {{name}} </li>
+                                <li> {{price}} </li>
+                                <hr>
+                            {{/each}}
+                        </ul>
+                    {{/with}}
 
                 </ul>
             </div>
