@@ -3,55 +3,74 @@
         <section>
             <div>
                 {{> title data= "Mac" big=true}}
-                {{name}} <br>
-                {{description}} <br>
-                {{price}} <br>
-                {{category}} <br>
+                <ul>
+                    <li>name:{{name}} </li><br>
+                    <li>description:{{description}}</li> <br>
+                    <li>price:{{price}}</li> <br>
+                    <li>category:{{category}}</li> <br>
+                </ul>
             </div>
 
             <div>
                 <ul>
-                    {{#with  features.processor}} 
-                        <li> {{brand}} </li>
-                        <li> {{model}} </li>
-                        <li> {{speed}} </li>
-                        <li> {{cores}} </li>
-                        <li> {{cache}} </li>
-                    {{/with}}
+                    <ul>
+                        {{#with  features.processor}}
+                        <div> Processor </div>
+                            <li> brand:{{brand}} </li>
+                            <li> model:{{model}} </li>
+                            <li> speed:{{speed}} </li>
+                            <li> cores:{{cores}} </li>
+                            <li> cache:{{cache}} </li>
+                        {{/with}}
+                    </ul>
                     <hr>
-                    {{#with  features.memory}} 
-                        <li> {{type}} </li>
-                        <li> {{size}} </li>
-                        <li> {{speed}} </li>                        
-                    {{/with}}
+                    <ul>
+                        {{#with  features.memory}}
+                        <div>Memory</div>
+                            <li> type:{{type}} </li>
+                            <li> size:{{size}} </li>
+                            <li> speed:{{speed}} </li>
+                        {{/with}}
+                    </ul>
                     <hr>
-                    {{#with  features.storage}} 
-                        <li> {{type}} </li>
-                        <li> {{size}} </li>                                               
-                    {{/with}}
+                    <ul>
+                        {{#with  features.storage}}
+                        <div>Storage</div>
+                            <li> type:{{type}} </li>
+                            <li> size:{{size}} </li>
+                        {{/with}}
+                    </ul>
                     <hr>
                      {{#with  features.display}} 
-                        <li> {{size}} </li>
-                        <li> {{resolution}} </li>
-                        <li> {{technology}} </li>
-                        <li> {{color_space}} </li>
-                        <li> {{brightness}} </li>
-                        <li> {{refresh_rate}} </li>
+                     <div>Display</div>
+                        <li> size:{{size}} </li>
+                        <li> resolution:{{resolution}} </li>
+                        <li> technology:{{technology}} </li>
+                        <li> color_space:{{color_space}} </li>
+                        <li> brightness:{{brightness}} </li>
+                        <li> refresh_rate:{{refresh_rate}} </li>
                     {{/with}}
                     <hr>
                     {{#with  features.graphics}} 
-                        <li> {{brand}} </li>
-                        <li> {{model}} </li>
-                        <li> {{memory}} </li>                        
+                    <div>Graphics</div>
+                        <li> brand:{{brand}} </li>
+                        <li> model:{{model}} </li>
+                        <li> memory:{{memory}} </li>                        
                     {{/with}}
                     <hr>
                    
                         {{#each features.ports}}
-                            <li> {{type}} </li>
-                            <li> {{count}} </li>
+                        <div>Ports</div>
+                            <li> type:{{type}} </li>
+                            <li> count:{{count}} </li>
                             <ul>
+                                <hr>
+                                
+                                <br>
+
                                 {{#each features}}
-                                    <li> {{this}} </li>
+                                
+                                    <li>Feature: {{this}} </li>
                                     <hr>
                                 {{/each}}
                             </ul>                            
@@ -60,25 +79,36 @@
                     </ul>
                     
 
-                    {{#with features.battery}} 
-                        <li> {{type}} </li>
-                        <li> {{capacity}} </li>
-                        <li> {{life}} </li>
-                    {{/with}}
+                    <ul>
+                        {{#with features.battery}}
+                        <div> Battery</div>
+                            <li>type: {{type}} </li>
+                            <li>capacity: {{capacity}} </li>
+                            <li>life: {{life}} </li>
+                        {{/with}}
+                    </ul>
 
                     <hr>
                     {{weight}} <br>
                     {{#with features.dimensions}} 
-                        <li> {{height}} </li>
-                        <li> {{width}} </li>
-                        <li> {{depth}} </li>
+                    <div>Dimensions</div>
+                        <li> height:{{height}} </li>
+                        <li> width:{{width}} </li>
+                        <li> depth:{{depth}} </li>
                     {{/with}}
+                    <hr>
 
-                    {{operating_system}} <br>
+                    {{#with features}}
+                    <li>Operating system:{{operating_system}} </li>
+                    {{/with}}
+                    
+                    <br>
+
+                    <hr>
 
                     {{#each features.accessories}} 
-                        <li> {{name}} </li>
-                        <li> {{price}} </li>
+                        <li> name:{{name}} </li>
+                        <li> price:{{price}} </li>
                         <hr>
                     {{/each}}
 
