@@ -501,6 +501,7 @@ router.get('/program', function (req, res) {
             name: 'Museum Visit',
             type: 'Art',
             duration: 3,
+
             details: {
               museum: {
                 name: 'The Louvre',
@@ -536,6 +537,7 @@ router.get('/program', function (req, res) {
             name: 'Cultural Show',
             type: 'Music and Dance',
             duration: 2,
+
             details: {
               venue: {
                 name: 'Moulin Rouge',
@@ -555,7 +557,7 @@ router.get('/program', function (req, res) {
                   type: 'Classical ballet company',
                 },
               ],
-              guide: {
+              guide2: {
                 name: 'Sophie',
                 language: 'English',
                 rating: 4.6,
