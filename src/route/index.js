@@ -501,6 +501,7 @@ router.get('/program', function (req, res) {
             name: 'Museum Visit',
             type: 'Art',
             duration: 3,
+
             details: {
               museum: {
                 name: 'The Louvre',
@@ -536,6 +537,7 @@ router.get('/program', function (req, res) {
             name: 'Cultural Show',
             type: 'Music and Dance',
             duration: 2,
+
             details: {
               venue: {
                 name: 'Moulin Rouge',
@@ -555,7 +557,7 @@ router.get('/program', function (req, res) {
                   type: 'Classical ballet company',
                 },
               ],
-              guide: {
+              guide2: {
                 name: 'Sophie',
                 language: 'English',
                 rating: 4.6,
@@ -1143,7 +1145,6 @@ router.get('/facebook', function (req, res) {
 
 // ================================================================
 
-// ================================================================
 
 // router.get Створює нам один ентпоїнт
 
@@ -1153,7 +1154,9 @@ router.get('/task21', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
-    layout: 'basic',
+
+    layout:'basic',
+
     heading: {
       main: {
         title: 'JavaScript',
@@ -1216,6 +1219,8 @@ router.get('/task21', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
+
 
 // ================================================================
 
@@ -1283,6 +1288,7 @@ router.get('/task22', function (req, res) {
 })
 
 // ================================================================
+
 
 // Підключаємо роутер до бек-енду
 module.exports = router

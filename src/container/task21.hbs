@@ -10,6 +10,7 @@
 
                     <div class="card">
                         <div class="card-body">
+
                             {{#with main}}
                                  <h1>{{title}}</h1> 
                                 <br>
@@ -22,10 +23,12 @@
                                     <div class="btn btn-outline-primary"> {{outline}} </div>
                                 {{/with}}
                             {{/with}}
+
                         </div>
                             <br>
                             <br>
                         <div class="card-body">
+
                             {{#with second}}
                                 <h2> {{title}} </h2>
                                 <p> {{text}} </p>
@@ -37,10 +40,26 @@
                                     <div class="btn btn-outline-secondary"> {{outline}} </div>
                                 {{/with}}
                             {{/with}}
+
+                            <div class="card card-body">
+                                {{#with second}}
+                                    <h2> {{title}} </h2>
+                                    <p> {{text}} </p>
+                                    <br>
+                                    {{#with button_text}}
+                                        <div class="btn btn-secondary">{{solid}}</div>
+                                        <br>
+                                        <br>
+                                        <div class="btn btn-outline-secondary"> {{outline}} </div>
+                                    {{/with}}
+                                {{/with}}
+                            </div>
+
                         </div>
                             <br>
                         <div class="card-body">
                             {{#with subblock}}
+
                                 <h3> {{title}} </h3>
                                 <p> {{text}} </p>
                                 <br>
@@ -50,6 +69,19 @@
                                     <br>
                                     <div class="btn btn-outline-dark"> {{outline}} </div>
                                 {{/with}}
+
+                                <div class="card card-body">
+                                    <h3> {{title}} </h3>
+                                    <p> {{text}} </p>
+                                    <br>                                
+                                    {{#with button_text}}
+                                        <div class="btn btn-dark">{{solid}}</div>
+                                        <br>
+                                        <br>
+                                        <div class="btn btn-outline-dark"> {{outline}} </div>
+                                    {{/with}}
+                                </div>
+
                             {{/with}}
                         </div>
                     </div>
