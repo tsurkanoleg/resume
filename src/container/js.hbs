@@ -1,57 +1,82 @@
 <div>
     <main>
         <section>
+
+    
+
+
             {{> title data= "js" big=true}}
 
+
             <div>
-                {{name}} <br>
-                {{description}} <br>
+                <p> name:{{name}}</p> <br>
+                <p>description:{{description}}</p> <br>
+                
                 <ul>
-                    {{#with history}} 
-                        <li> {{year}} </li>
-                        <li> {{founder}} </li>
+                    <div>history</div>
+                    {{#with history}}
+                    <div>
+                        <li> year:{{year}} </li>
+                        <li>founder: {{founder}} </li>
                     {{/with}}
-                    <hr>
-                    {{#each types}} 
+                </ul>
+                <hr>
+                <ul>
+                    <div>types</div>
+                    {{#each types}}
                         <li> {{this}} </li>
                     {{/each}}
+                </ul>
 
-                    <hr>
+                <hr>
 
-                    {{#with syntax}} 
-                        <li> {{variables}} </li>
-                        <li> {{functions}} </li>
-                        <li> {{conditionals}} </li>
-                        <li> {{loops}} </li>
-                        <li> {{classes}} </li>
+                <ul>
+                    <div>syntax</div>
+                    {{#with syntax}}
+                        <li> variables:{{variables}} </li>
+                        <li> functions:{{functions}} </li>
+                        <li> conditionals:{{conditionals}} </li>
+                        <li> loops:{{loops}} </li>
+                        <li> classes:{{classes}} </li>
                     {{/with}}
+                </ul>
 
-                    <hr>
+                <hr>
 
-                    {{#each features}} 
+                <ul>
+                    <div>features</div>
+                    {{#each features}}
                         <li> {{this}} </li>
                     {{/each}}
+                </ul>
 
-                    <hr>
-                     {{#each libraries}} 
+                <hr>
+                <ul>
+                <div>   libraries  </div>
+                    {{#each libraries}}
                         <li> {{this}} </li>
                     {{/each}}
+                </ul>
 
-                    <hr>
-                     {{#each tools}} 
+                <hr>
+                <ul>
+                    <div>tools</div>
+                    {{#each tools}}
                         <li> {{this}} </li>
                     {{/each}}
+                </ul>
 
-                    <hr>
+                <hr>
 
-                    {{#each community}} 
-                        <li> {{name}} </li>
-                        <li> {{type}} </li>
+                <ul>
+                    <div>community</div>
+                    {{#each community}}
+                        <li> name:{{name}} </li>
+                        <li> type:{{type}} </li>
                         <hr>
                     {{/each}}
-
-
                 </ul>
+                
             </div>
         </section>
     </main>
