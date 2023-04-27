@@ -7,52 +7,64 @@
             <div>
                 {{name}} <br>
                 {{description}} <br>
+                
                 <ul>
-                    {{#with history}} 
+                    {{#with history}}
                         <li> {{year}} </li>
                         <li> {{founder}} </li>
                     {{/with}}
-                    <hr>
-                    {{#each types}} 
+                </ul>
+                <hr>
+                <ul>
+                    {{#each types}}
                         <li> {{this}} </li>
                     {{/each}}
+                </ul>
 
-                    <hr>
+                <hr>
 
-                    {{#with syntax}} 
+                <ul>
+                    {{#with syntax}}
                         <li> {{variables}} </li>
                         <li> {{functions}} </li>
                         <li> {{conditionals}} </li>
                         <li> {{loops}} </li>
                         <li> {{classes}} </li>
                     {{/with}}
+                </ul>
 
-                    <hr>
+                <hr>
 
-                    {{#each features}} 
+                <ul>
+                    {{#each features}}
                         <li> {{this}} </li>
                     {{/each}}
+                </ul>
 
-                    <hr>
-                     {{#each libraries}} 
+                <hr>
+                <ul>
+                    {{#each libraries}}
                         <li> {{this}} </li>
                     {{/each}}
+                </ul>
 
-                    <hr>
-                     {{#each tools}} 
+                <hr>
+                <ul>
+                    {{#each tools}}
                         <li> {{this}} </li>
                     {{/each}}
+                </ul>
 
-                    <hr>
+                <hr>
 
-                    {{#each community}} 
+                <ul>
+                    {{#each community}}
                         <li> {{name}} </li>
                         <li> {{type}} </li>
                         <hr>
                     {{/each}}
-
-
                 </ul>
+                
             </div>
         </section>
     </main>
