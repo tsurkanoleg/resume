@@ -6,6 +6,7 @@
             {{name}} <br>
             <ul>
                 <hr>
+                <div>users</div>
                 {{#each users}}
                     <li>{{id}}</li>
                     <li>{{name}}</li>
@@ -14,6 +15,7 @@
                     <hr>
 
                         <ul>
+                            <div>friends</div>
                             {{#each friends}}
                                 <li>{{id}}</li>
                                 <li>{{name}}</li>
@@ -21,6 +23,7 @@
                                 <li>{{age}}</li>
                                 <hr>
                                 <ul>
+                                    <div>mutual_friends</div>
                                     {{#each mutual_friends}}
                                         <li>{{id}}</li>
                                         <li>{{name}}</li>
@@ -28,24 +31,25 @@
                                         <li>{{age}}</li>
                                         <hr>                                        
                                         <ul>
-                                                {{#each mutual_friends}}
-                                                <li>{{id}}</li>
-                                                <li>{{name}}</li>
-                                                <li>{{gender}}</li>
-                                                <li>{{age}}</li>
-                                                
-                                                                                            
+                                            <div>mutual_friends</div>
+                                            {{#each mutual_friends}}
+                                            <li>{{id}}</li>
+                                            <li>{{name}}</li>
+                                            <li>{{gender}}</li>
+                                            <li>{{age}}</li>                                 
                                             {{/each}}
                                         </ul>                                            
                                     {{/each}}
                                 </ul>
                                 <hr>
+                                <div>groups</div>
                                 {{#each groups}} 
                                     <li>{{id}}</li>
                                     <li>{{name}}</li>
                                     <li>{{description}}</li>
                                     <hr>
                                         <ul>
+                                            <div>members</div>
                                             {{#each members}}
                                                 <li>{{id}}</li>
                                                 <li>{{name}}</li>
