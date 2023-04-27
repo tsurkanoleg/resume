@@ -50,6 +50,7 @@
                                         {{/each}}
                                 {{/each}}
                                 <ul>
+
                         {{#each groups}}
                             <div>Groups</div>
                             <br>
@@ -66,6 +67,24 @@
                                         <li>name:{{name}}</li>
                                         <li>gender:{{gender}}</li>
                                         <li>age:{{age}}</li>
+
+                                    {{#each mutual_friends}}
+                                        <li>{{id}}</li>
+                                        <li>{{name}}</li>
+                                        <li>{{gender}}</li>
+                                        <li>{{age}}</li>
+                                        <hr>                                        
+                                        <ul>
+                                                {{#each mutual_friends}}
+                                                <li>{{id}}</li>
+                                                <li>{{name}}</li>
+                                                <li>{{gender}}</li>
+                                                <li>{{age}}</li>
+                                                
+                                                                                            
+                                            {{/each}}
+                                        </ul>                                            
+
                                     {{/each}}
                                 </ul>
                         {{/each}}
