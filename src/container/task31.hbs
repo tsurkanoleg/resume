@@ -33,9 +33,9 @@
             <div>
                 {{#with city}}
                      <h2> {{title}}</h2> 
-                    <div class="card col-5">
+                    <div class="card col-10">
                         {{#each cards}} 
-                            <ul class="card-body ">
+                            <ul class="card m-3 ">
                                 <section>
                                     <div>
                                         {{#with picture}}
@@ -64,17 +64,27 @@
         <hr>
         <section>
             {{#with winner}} 
-                <p>{{title}}</p>
+                <h2>{{title}}</h2>
                 {{#with table}} 
-                    <div>
-                        {{#each head}} 
+                    <table class="table table-bordered">                        
+                        {{#each head}}
                             <thead>
                                 <tr>
                                     <th> {{this}} </th>
                                 </tr>
                             </thead>
                         {{/each}}
-                    </div>
+                        {{#each user}}
+                            <tbody>
+                                <tr>                                        
+                                    <td>{{place}}</td>
+                                    <td>{{name}}</td>
+                                    <td>{{surname}}</td>
+                                    <td>{{nickname}}</td>                                        
+                                </tr>
+                            </tbody>
+                        {{/each}}                        
+                    </table>
                 {{/with}}
             {{/with}}
         </section>
