@@ -37,13 +37,13 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
+      router.get('/', function (req, res) {
+        // res.render генерує нам HTML сторінку
 
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
+        //            ↙ cюди вводимо назву файлу з сontainer
+        res.render('index', {})
+        //                  ↑↑ сюди вводимо JSON дані
+      })
 
 // ================================================================
 
@@ -51,7 +51,7 @@ router.get('/', function (req, res) {
 router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
-    layout: "basic",
+    
     // ↙ сюди вводимо JSON дані
     Page: {
       title: 'Resume | Sumamry',
@@ -80,7 +80,7 @@ router.get('/summary', function (req, res) {
 router.get('/skills', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render("skills", {
-    layout: 'basic',
+    
     // ↙ сюди вводимо JSON дані
     Page: {
       title: 'Resume | Skills',
@@ -144,12 +144,11 @@ router.get('/skills', function (req, res) {
 })
 // ================================================================
 
-// ================================================================
 
 router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
-    layout: 'basic',
+   
     // ↙ сюди вводимо JSON дані
     Page: {
       title: 'Resume | Education',
@@ -208,12 +207,12 @@ router.get('/education', function (req, res) {
 })
 // ================================================================
 
-// ================================================================
+
 
 router.get('/work', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
-    layout: 'basic',
+    
     // ↙ сюди вводимо JSON дані
 
     layout: 'basic',
@@ -1288,7 +1287,39 @@ router.get('/task22', function (req, res) {
 })
 
 // ================================================================
+router.get('/bootstrapnavs', function (req, res) {
+  // res.render генерує нам HTML сторінку
 
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrapnavs', {
+
+    layout:'basic',
+
+
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+
+
+// ================================================================
+
+
+
+
+// ================================================================
+
+
+
+
+// ================================================================
+
+
+
+
+// ================================================================
 
 // Підключаємо роутер до бек-енду
 module.exports = router
