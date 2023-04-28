@@ -1,0 +1,83 @@
+<main>
+    <div>
+        <section>
+            <div class="row gx-5">
+                <ul>
+                    {{#with navigation}}
+
+                        {{#each links}}
+                            <li class="btn btn-link col-2 "><a href="{{href}}">{{text}}</a></li>                            
+                        {{/each}}
+
+                        {{#with button}}
+                        <a href="{{href}}"><button class="btn btn-primary col-2 ">{{text}}</button></a>
+                        {{/with}}
+                    {{/with}}
+                </ul>
+            </div>
+        </section>
+        <hr>
+            
+        <section class="card">
+            {{#with header}} 
+            <h1>{{title}}</h1>
+            <p>{{description}}</p>
+            {{#with button}}
+                <a href="{{link}}"><button class="btn btn-primary">{{text}}</button></a>
+            {{/with}}
+            {{/with}}
+        </section>
+        <hr>
+
+        <section class="col-12">
+            <div>
+                {{#with city}}
+                     <h2> {{title}}</h2> 
+                    <div class="card col-5">
+                        {{#each cards}} 
+                            <ul class="card-body ">
+                                <section>
+                                    <div>
+                                        {{#with picture}}
+                                            <img class="card-img-top" src="{{src}}" alt="{{alt}}">
+                                        {{/with}}
+                                    </div>
+                                    <div>
+                                        <p class="card-header">{{title}}</p>
+                                    </div>
+                                    <div>
+                                        <p>{{description}}</p>
+                                    </div>
+                                    <div>
+                                        {{#with button}}
+                                            <a href="{{href}}"><button class="btn btn-primary">{{text}}</button></a>
+                                        {{/with}}
+                                    </div>
+                                </section>                                
+                            </ul>
+                        {{/each}}
+                    </div>
+                {{/with}}
+            </div>
+        </section>
+
+        <hr>
+        <section>
+            {{#with winner}} 
+                <p>{{title}}</p>
+                {{#with table}} 
+                    <div>
+                        {{#each head}} 
+                            <thead>
+                                <tr>
+                                    <th> {{this}} </th>
+                                </tr>
+                            </thead>
+                        {{/each}}
+                    </div>
+                {{/with}}
+            {{/with}}
+        </section>
+
+    </div>
+</main>
