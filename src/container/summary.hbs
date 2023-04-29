@@ -6,23 +6,24 @@
 <div>
     {{#with main}}
     <main>
-        <section>
+        <section class="mb-5">
             {{> title data=summary.title big=true}}
             <div>
                 <p>
                     {{summary.text}}
                 </p>
             </div>
-
-            {{#with experience }}
-            <section>
-                {{> title data=title big=false}}
-                <div>
-                    <p>{{text}}</p>
-                </div>
-            </section>
-            {{/with}}
         </section>
+
+        {{#with experience }}
+        <section>
+            {{> title data=title big=false}}
+            <div>
+                <p>{{text}}</p>
+            </div>
+        </section>
+        {{/with}}
+        
     </main>
     {{/with}}
 </div>
