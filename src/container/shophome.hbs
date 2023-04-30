@@ -24,18 +24,18 @@
                                 <div class="list-group" >
                                     {{#each cards}}
                                         <div class="list-group-item ">
-                                            <div class="card"> 
-                                                <div >
-                                                    <div class="text-bg-dark ">
-                                                        <div class="card-body">
-                                                                <div class="badge text-bg-success rounded-pill text-uppercase">{{isTop}}</div>
-                                                                <div class="badge text-bg-danger rounded-pill text-uppercase">{{isNew}}</div>
+                                             <div class="card-body">
+                                                                {{!-- <div class="badge text-bg-success rounded-pill text-uppercase">{{isTop}}</div>
+                                                                <div class="badge text-bg-danger rounded-pill text-uppercase">{{isNew}}</div> --}}
                                                             <div class="card-title">{{title}}</div>
                                                             <div class="card-text">{{description}}</div>
+                                                             {{#if isTop}} 
+                                                            <span class="badge rounded-pill text-bg-warning text-uppercase">Top!</span>
+                                                            {{/if}}
+                                                            {{#if isNew}} 
+                                                            <span class="badge rounded-pill text-bg-primary">New!</span>
+                                                            {{/if}}
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     {{/each}}
                                 </div>
