@@ -1,1 +1,138 @@
-`git add <div class=""></div>
+<main class="m-3">
+    
+    <div>
+        {{#with navigation}} 
+            <div >
+                <div class="card">
+                    <div class="card-body">
+                        {{#each links}}
+                            <button class="btn btn-link"> <a href=" {{href}} ">{{text}}</a> </button>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        {{/with}}
+    </div>
+
+    <section>        
+        <div class="row">
+            {{#with  newsBlock}}
+                <div class="text-center"><h2>{{title}}</h2></div>
+                    <div class="col-3">
+                        <div class="list-group">
+                            <div class="my-3">
+                                {{#each cards}}
+                                    <div class="card">
+                                        <div class="list-group-item ">
+                                            <div class="text-bg-dark ">
+                                                <div class="card-body">
+                                                        <div class="badge text-bg-success rounded-pill text-uppercase">{{isTop}}</div>
+                                                        <div class="badge text-bg-danger rounded-pill text-uppercase">{{isNew}}</div>
+                                                    <div class="card-title">{{title}}</div>
+                                                    <div class="card-text">{{description}}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+            {{/with}}
+        </div>
+    </section>
+    
+    <hr>
+
+   
+    {{#with goodsBlock}}
+        <div class="row">            
+            <div class="nav">
+                {{#each tabs}}
+                    <div class="card-body col-2 my-2">
+                        <div class="nav-tabs">
+                            <div class="nav-item">
+                                <a href="#" class="nav-link active">{{text}}</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    {{/with}}
+
+    <hr>
+
+    <div class="row">
+        {{#each goodsBlock.cards}}
+            <div class="col-4 g-3 ">
+                <div class="card">
+                    <div>
+                       <img class="img-card-top col-12" src="{{image}}">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">{{title}}</h4>
+                        <p>{{description}}</p> 
+                        <div class="badge text-bg-success rounded-pill text-uppercase">{{isHop}}</div>
+                        <div class="badge text-bg-danger rounded-pill text-uppercase">{{isNew}}</div>                      
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <hr>
+    <div class="row-4">
+        <div class="card">
+            <div class="card-body">
+                {{#with subscribe}}
+                    <h2>{{header}}</h2>
+                    <p>{{description}}</p>
+                    <div class="flex-column col-3 ">
+                        {{#each buttons}}
+                            <a href="{{link}}" class="btn btn-primary m-2">{{text}}</a>
+                        {{/each}}
+                    </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row-4">
+        <div class="card text-center">
+            <div class="card-body ">
+                {{#with service}}
+                    <h2>{{title}}</h2>
+                    <p>{{description}}</p>
+                    <div class="flex-column col-3 ">
+                        {{#each buttons}}
+                            <a href="{{link}}" class="btn btn-primary m-2">{{text}}</a>
+                        {{/each}}
+                    </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>   
+    <div class="row">
+        
+                {{#each footer}}
+                    {{#each this}}
+                        <div>
+                            <div class="listgroup">
+                                <div class="listgroup-item">
+                                    <div class="col-2`">
+                                        <div>
+                                            <a href="{{link}}" class="btn btn-link"> {{text}} </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                {{/each}}
+           
+    </div>           
+</footer>
