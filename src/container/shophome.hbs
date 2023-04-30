@@ -1,6 +1,6 @@
-<main class="m-3">
+<main class="m-3 ">
     
-    <div>
+    <header>
         {{#with navigation}} 
             <div >
                 <div class="card">
@@ -12,84 +12,64 @@
                 </div>
             </div>
         {{/with}}
-    </div>
+    </dheader>
 
-    <section>        
-        <div class="row">
-            {{#with  newsBlock}}
-                <div class="text-center"><h2>{{title}}</h2></div>
-                    <div class="col-3">
-                        <div>
-                            <div class="p-2">
-                                <div class="list-group" >
-                                    {{#each cards}}
-                                        <div class="list-group-item ">
-                                             <div class="card-body">                                                               
-                                               <div class="card-title">{{title}}</div>
-                                               <div class="card-text">{{description}}</div>
-                                                 {{#if isTop}} 
-                                                <span class="badge rounded-pill text-bg-warning text-uppercase">Top!</span>
+    <section > 
+        {{#with  newsBlock}}
+            <div class="text-center"><h2>{{title}}</h2></div>
+                <div class="row">
+                    <div class="col-3 mb-3">
+                        {{#each cards}}
+                            <divclass="card ">
+                                <div class="list-group ">
+                                    <div  class="list-group-item " >
+                                        <div class="text-bg-dark ">
+                                            <div class="card-body">
+                                                <div class="card-title">{{title}}</div>
+                                                <div class="card-text">{{description}}</div>
+
+                                                {{#if isTop}} 
+                                                    <span class="badge rounded-pill text-bg-warning text-uppercase">Top!</span>
                                                 {{/if}}
                                                 {{#if isNew}} 
-                                                <span class="badge rounded-pill text-bg-primary">New!</span>
+                                                    <span class="badge rounded-pill text-bg-primary">New!</span>
                                                 {{/if}}
                                             </div>
                                         </div>
-                                    {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        {{/each}} 
+                    </div>
+                </div>
+        {{/with}}
+    </section>
+    
+    
+    <hr>
+        <div class="row">   
+            {{#with goodsBlock}}         
+                <div class="nav">
+                    {{#each tabs}}
+                        <div class="card-body col-2 my-2">
+                            <div class="nav-tabs">
+                                <div class="nav-item">                                    
+                                     {{#if isActive}}
+                                    <a href="#" class="nav-link ">{{text}}</a>
+                                    {{/if}}
+                                    {{#if isDisabled}}
+                                    <a href="#" class="nav-link text-bg-">{{text}}</a>
+                                    {{/if}}
                                 </div>
                             </div>
                         </div>
-                    </div>
-            {{/with}}
-        </div>
-    </section>
-    
-    <hr>
-   
-
-   
-    {{#with goodsBlock}}
-        <div class="row">            
-            <div class="nav">
-                {{#each tabs}}
-                    <div class="card-body col-2 my-2">
-                        <div class="nav-tabs">
-                            <div class="nav-item">
-                                <a href="#" class="nav-link active">{{text}}</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                {{/each}}
-            </div>
-        </div>
-    {{/with}}
-
-    <hr>
-    {{#each goodsBlock.cards}}
-        <div class="col-4 mb-4">
-            <div class="card">
-                <img src="{{image}}" alt="photo" class="card-img-top">
-                <div class="card-body">
-                    <div class="card-title">
-                        <b>{{ tabs}}</b>
-                        {{#each cards}}
-                            {{#if isHot}} 
-                            <span class="badge rounded-pill text-bg-warning text-uppercase">Hot!</span>
-                            {{/if}}
-                            {{#if isNew}} 
-                            <span class="badge rounded-pill text-bg-primary">New!</span>
-                            {{/if}}
-                        {{/each}}
-                    </div>
-                    <div>
-                        {{description}}
-                    </div>
-
+                    {{/each}}
                 </div>
-            </div>
-        </div>
-    {{/each}}
+            {{/with}}
+        </div>    
+    <hr>
+
+   
     <hr>
 
     <div class="row">
@@ -97,11 +77,11 @@
             <div class="col-4 g-3 ">
                 <div class="card">
                     <div>
-                        <img class="img-card-top col-12" src="{{image}}">
+                        <img class="card-img-top col-12" src="{{image}}" >
                         </div>
                     <div class="card-body">
-                        
-                        <div class="rov">
+                        <b>{{ tabs}}</b>
+                        <div >
                             {{#if isHot}}
                             <span class="badge rounded-pill text-bg-warning text-uppercase">Hot!</span>
                             {{/if}}
@@ -155,21 +135,21 @@
 <footer>   
     <div class="row">
         
-                {{#each footer}}
-                    {{#each this}}
-                        <div>
-                            <div class="listgroup">
-                                <div class="listgroup-item">
-                                    <div class="col-2`">
-                                        <div>
-                                            <a href="{{link}}" class="btn btn-link"> {{text}} </a>
-                                        </div>
-                                    </div>
+        {{#each footer}}
+            {{#each this}}
+                <div class="col-3">
+                    <div class="listgroup">
+                        <div class="listgroup-item">
+                            <div>
+                                <div>
+                                    <a href="{{link}}" class="btn btn-link"> {{text}} </a>
                                 </div>
                             </div>
                         </div>
-                    {{/each}}
-                {{/each}}
+                    </div>
+                </div>
+            {{/each}}
+        {{/each}}
            
     </div>           
 </footer>
