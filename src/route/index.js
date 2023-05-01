@@ -1960,14 +1960,17 @@ router.get('/shoporder', function (req, res) {
       },
     },
     action_block: [
-      { text: 'Швидке замовлення', isSuccess: true },
+      { text: 'Швидке замовлення',isSuccess: true },
       { text: 'Видалити', isDanger: true },
       { text: 'Детальніше', isInfo: true },
     ],
     total: {
       title: 'Всього',
       item_list: [
-        { name: 'Ноут', price: '25 000 ₴' },
+        { 
+          name: 'Ноут', 
+          price: '25 000 ₴' 
+        },
         { name: 'Мишка', price: '25 000 ₴' },
         { name: 'Клава', price: '25 000 ₴' },
       ],
