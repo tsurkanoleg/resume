@@ -1,0 +1,32 @@
+<main class="p-5">
+
+    <div>
+        {{#with navigation}} 
+            <div >
+                <div class="card">
+                    <div class="card-body">
+                        {{#each links}}
+                            <button class="btn btn-link"> <a href=" {{href}} ">{{text}}</a> </button>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        {{/with}}
+    </div>
+
+    <div>
+        <div class="card-body">
+            <header>
+                {{#with header}}
+                    <div class="display-6">{{title}}</div>
+
+                    {{#with button}} 
+                        <button class="btn btn-primary"><a href="{{link}}">{{text}}</a></button>
+                    {{/with}}
+
+                {{/with}}
+            </header>
+        </div>
+    </div>
+
+</main>
