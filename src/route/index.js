@@ -2017,7 +2017,7 @@ router.get('/shopcart', function (req, res) {
           description:
             "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
           isHot: false,
-          idNew: false,
+          : false,
         },
       ],
     },
