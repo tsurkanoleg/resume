@@ -37,6 +37,8 @@
    
    </div>
 
+   <hr>
+
    <div class=" row">
        {{#with total}}
             <div class="col-4">
@@ -52,40 +54,64 @@
                 {{/each}}
             </div>
         {{/with}}
+   </div>
+
+   <hr>
+
+    <div  class="row">
+        {{#with goodsOtherBlock}}
+            <p class="display-5 text-center">{{title}}</p>
+            {{#each cards}}
+                <div class="card p-1 col-4">
+                    <div class="card-body ">
+                        <img height="100" src="{{image}}">
+                        <p class="card-title"> {{title}} </p>
+                        <p> {{description}} </p>
+                        {{#if isHot}}
+                            <div class="badge text-bg-warning rounded-pill">isHot</div>
+                            {{else}}                    
+                        {{/if}}
+                        {{#if idNew}}
+                            <div class="badge text-bg-primary rounded-pill">idNew</div>
+                            {{else}}
+                        {{/if}}
+                    </div>
+                </div>
+            {{/each}}
+        {{/with}}
+    </div>
+
+    <hr>
+
+    <div class=" row">
+       {{#with subscribe}}
+            <div class="col-4">
+                <h2 class="mb-3">{{header}}</h2>
+                <p class="mb-3">{{description}}</p>                
+                {{#each buttons}}
+                    <a href="{{link}}" class="btn btn-primary mb-3" > {{text}}</a> <br>
+                {{/each}}
+            </div>
+        {{/with}}
 
    </div>
 
-    <div >
-        {{#with goodsOtherBlock}}
-            <p class="display-5 text-center">{{title}}</p>
+   <hr>
         
-                <div class="card ">
-                    {{#each cards}}
-                        <div >
-                            <div class="card-body row">
-                                <div class="col-4">
-                                    <img src="{{image}}">
-                                    <p class="card-title"> {{title}} </p>
-                                    <p> {{description}} </p>
-                                    {{!-- {{#if isHot}}
-                                        <div class="badge text-bg-warning rounded-pill text-uppercase">{{isHop}}</div>
-                                        {{else}}
-                                        
-                                    {{/if}}
-
-                                    {{#if idNew}} 
-                                        <div class="badge text-bg-primary rounded-pill text-uppercase">{{idNew}}</div>
-                                        {{else}}
-                                    {{/if}} --}}
-                                </div>
-                            </div>
+   <footer>   
+    <div class="row">
+        {{#each footer}}
+            <div class="col-2">
+                {{#each this}}
+                    <div class="listgroup">
+                        <div class="listgroup-item">                            
+                            <a href="{{link}}" class="btn btn-link"> {{text}} </a>
                         </div>
-                    {{/each}}
-                </div>
-        
-        {{/with}}
-    </div>
-        
-   
+                    </div>
+                {{/each}}
+            </div>
+        {{/each}}
+    </div>           
+</footer>
 
 </main>
