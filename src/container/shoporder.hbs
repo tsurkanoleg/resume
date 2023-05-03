@@ -1,5 +1,5 @@
 <main class="m-3">
-    <div class="row">
+    
         <div class="col-12">
             {{#with navigation}} 
                 <div >
@@ -23,6 +23,8 @@
                 <b>{{header}}</b>
             </div>
         </header>
+
+    <div class="row">
 
         <div clas="col-8">
             {{#with contacts_data}}
@@ -529,27 +531,27 @@
             </div>
         </div>
 
-        
-    </div>   
+    </div>     
+     
             
         
-    <hr>
-       
+        <hr>
         
-    <footer>
-        <div class="row p-2">
-            {{#each footer}}
-                {{#each this}}
-                <div class="listgroup col-2">
-                    <div class="listgroup-item ">
-                        <a href="{{link}}" class="btn btn-link"> {{text}} </a>
+            
+        <footer>
+            <div class="row p-2">
+                {{#each footer}}
+                    {{#each this}}
+                    <div class="listgroup col-2">
+                        <div class="listgroup-item ">
+                            <a href="{{link}}" class="btn btn-link"> {{text}} </a>
+                        </div>
                     </div>
-                </div>
+                    {{/each}}
                 {{/each}}
-            {{/each}}
-        </div>
-    </footer>
-    
+            </div>
+        </footer>
+     
     
     
    
