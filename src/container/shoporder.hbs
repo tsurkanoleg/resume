@@ -1,6 +1,6 @@
 <main class="m-3">
     <div class="row">
-        <div>
+        <div class="col-12">
             {{#with navigation}} 
                 <div >
                     <div class="card">
@@ -18,59 +18,55 @@
             {{/with}}
         </div>
     
-        <header class="row">
+        <header class="col-12">
             <div class="display-5 my-5">
                 <b>{{header}}</b>
             </div>
         </header>
 
-        {{#with contacts_data}} 
-
-            <div class=" display-6 pb-3">
-                <b>{{title}}</b>
-            </div> 
-
-            <div class="col-6 my-5">
-                <div class="card">
-                    <div >
-                        {{#each buttons}}
-                            <div >
-                                {{#if isPrimary}}
-                                <span class="btn btn-warning">{{text}}</span>
-                                {{/if}}                                            
-                            </div>
-                        {{/each}}
+        <div clas="col-8">
+            {{#with contacts_data}}
+                <div class=" display-6 pb-3">
+                    <b>{{title}}</b>
+                </div>
+                <div class=" my-5">
+                    <div class="card col-4">
+                        <div >
+                            {{#each buttons}}
+                                <div >
+                                    {{#if isPrimary}}
+                                    <span class="btn btn-warning">{{text}}</span>
+                                    {{/if}}
+                                </div>
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-6 my-5">
-                <div class="card">                           
-                    <div >
-                        {{#each buttons}}
-                            <div >
-                                {{#if isOutline}}
-                                <span class="btn btn-outline-warning ">{{text}}</span>
-                                {{/if}}
-                            </div>                           
-                        {{/each}}
+                <div class=" my-5">
+                    <div class="card col-4">
+                        <div >
+                            {{#each buttons}}
+                                <div >
+                                    {{#if isOutline}}
+                                    <span class="btn btn-outline-warning ">{{text}}</span>
+                                    {{/if}}
+                                </div>
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
-            </div>                
-
-            <div>
-                <hr>
-            </div>
-                                    
-            <div class="col-8">
-                <div class="row">
+                <div>
+                    <hr>
+                </div>
+            
+                <div class="col-8">                   
                     {{#with form}}
-                        <div class="col-4 my-5">
+                        <div class=" my-2">
                             {{#with input.surname}}
                                 <div class="mb-4">
-                                    <div class="row">
-                                        <div class="">
-                                            <div class="card-body">
+                                    <div >
+                                        <div >
+                                            <div class="card-body col-4">
                                                 <div>
                                                     <div class="form-label">{{label}}</div>
                                                 </div>
@@ -86,12 +82,12 @@
                                 </div>
                             {{/with}}
                         </div>
-                        <div class="col-4 my-5">
+                        <div class=" my-2">
                             {{#with input.name}}
                                 <div class="mb-4">
-                                    <div class="row">
+                                    <div>
                                         <div >
-                                            <div class="card-body">
+                                            <div class="card-body col-4">
                                                 <div>
                                                     <div class="form-label">{{label}}</div>
                                                 </div>
@@ -107,13 +103,13 @@
                                 </div>
                             {{/with}}
                         </div>
-                
-                        <div class="col-4 my-5">
+        
+                        <div class=" my-2">
                             {{#with input.phone}}
                                 <div class="mb-4">
-                                    <div class="row">
+                                    <div >
                                         <div>
-                                            <div class="card-body">
+                                            <div class="card-body col-4">
                                                 <div>
                                                     <div class="form-label">{{label}}</div>
                                                 </div>
@@ -129,12 +125,13 @@
                                 </div>
                             {{/with}}
                         </div>
-                        <div class="col-4 my-5">
+                        
+                        <div class=" my-2">
                             {{#with input.email}}
                                 <div class="mb-4">
-                                    <div class="row">
+                                    <div >
                                         <div >
-                                            <div class="card-body">
+                                            <div class="card-body col-4">
                                                 <div>
                                                     <div class="form-label">{{label}}</div>
                                                 </div>
@@ -150,22 +147,27 @@
                                 </div>
                             {{/with}}
                         </div>
+                    {{/with}}                    
+                </div>
+            
+                <div class="col-8">
+                    {{#with form}} 
+                        {{#each switch}}                        
+                            <div class="form-check form-switch">
+                                <label class="form-check-label">{{text}}</label>
+                                <input name="switch" type="checkbox" class="form-check-input">
+                                {{#if isActive}}
+                                    <span isActive>{{true}}</span>
+                                {{else}}
+                                    <span isActive>{{false}}</span>
+                                {{/if}}                            
+                            </div>                        
+                        {{/each}}
                     {{/with}}
                 </div>
-            </div>
-        
-
-            {{#each switch}}
-                <div class="form-check form-switch">                
-                    <label class="form-check-label">{{text}}</label>
-                    <input type="checkbox" class="form-check-input">  
-                    
-                    {{#if isActive}}
-                        <span >{{isActive}}</span>
-                    {{/if}}                
-                </div>   
-            {{/each}}
+            
             {{/with}}
+        </div>
             
         <div class="col-4">
             <div class="card">
@@ -191,36 +193,37 @@
                     </div>
                 {{/each}}
             </div>
-        </div>
+            
+            <div class="">
+                <div class="card">
+                    {{#with total}}
+                        <divclass="card-body">
+                            <div class="display-5"><b>{{title}}</b></div><br>
+                            {{#each item_list}}
+                                {{name}}:
+                                {{price}}<br>
+                            {{/each}}
 
-        
-        <div class="col-4">
-            <div class="card">
-                {{#with total}}
-                    <divclass="card-body">
-                        <div class="display-5"><b>{{title}}</b></div><br>
-                        {{#each item_list}}
-                            {{name}}:
-                            {{price}}<br>
-                        {{/each}}
-                        {{#each additional_info}}
-                            {{text}}:
-                            {{value}}<br>
-                        {{/each}}
-                        {{#with total_price}} 
-                            {{text}}:
-                            {{value}}<br>
-                        {{/with}}
-                        {{#each button}} 
-                            {{#if isPrimary}}
-                                <span class="btn btn-primary mb-1">{{text}}</span>
-                            {{/if}}
-                            {{#if isOutline}}
-                                <span class="btn btn-outline-primary ">{{text}}</span>
-                            {{/if}}
+                            {{#each additional_info}}
+                                {{text}}:
+                                {{value}}<br>
+                            {{/each}}
+
+                            {{#with total_price}}
+                                {{text}}:
+                                {{value}}<br>
+                            {{/with}}
                             
-                        {{/each}}                        
-                {{/with}}
+                            {{#each button}}
+                                {{#if isPrimary}}
+                                    <span class="btn btn-primary mb-1">{{text}}</span>
+                                {{/if}}
+                                {{#if isOutline}}
+                                    <span class="btn btn-outline-primary ">{{text}}</span>
+                                {{/if}}            
+                            {{/each}}
+                    {{/with}}
+                </div>
             </div>
         </div>
 
@@ -229,19 +232,25 @@
                 <label class="form-label"><p class="display-4">{{title}}</p></label>
                     <div class="card">
                         <div class="card-body">
-                            {{#each select.options}}
-                                <div class="col-4">
-                                    <select class="form-select">
-                                        <option selected> {{placeholder}} </option>
-                                        <option value="1"> {{text}} </option>
-                                        <option value="2"> {{text}} </option>
-                                        <option value="3"> {{text}} </option>
-                                        <option value="4"> {{text}} </option>
-                                        <option value="5"> {{text}} </option>
-                                        <option value="6"> {{text}} </option>
-                                    </select>
+                            <div class="form-label ">{{label}}</div>
+                                <div >
+                                    {{#each select}}
+                                        <div class="col-4">
+                                            <select class="form-select mb-3">
+                                                <option selected> {{placeholder}} </option>
+                                                    {{#each option}}
+                                                        <option value="1"> {{text}} </option>
+                                                        <option value="2"> {{text}} </option>
+                                                        <option value="3"> {{text}} </option>
+                                                        <option value="4"> {{text}} </option>
+                                                        <option value="5"> {{text}} </option>
+                                                        <option value="6"> {{text}} </option>                                                        
+                                                    {{/each}}
+                                            </select>
+                                        </div>
+                                    {{/each}}
                                 </div>
-                            {{/each}}
+                            </div>
                         </div>
                     </div>
                     
@@ -254,6 +263,8 @@
                         </div>
                     {{/each}}
                 </div> 
+                
+                <hr>
 
 
                 {{#with payment}}
@@ -279,12 +290,12 @@
 
             
         <div class="col-8 mb-5">
-            <div class="row">
+            <div >
                 {{#with delivery}}
                     <div class="col-4 my-6">
                         {{#with contact.surname}}
                             <div class="mb-4">
-                                <div class="row">
+                                <div >
                                     <div class="">
                                         <div class="card-body">
                                             <div>
@@ -305,7 +316,7 @@
                     <div class="col-4 my-6">
                         {{#with contact.name}}
                             <div class="mb-4">
-                                <div class="row">
+                                <div >
                                     <div >
                                         <div class="card-body">
                                             <div>
@@ -327,7 +338,7 @@
                     <div class="col-4 my-6">
                         {{#with contact.phone}}
                             <div class="mb-4">
-                                <div class="row">
+                                <div >
                                     <div>
                                         <div class="card-body">
                                             <div>
@@ -348,7 +359,7 @@
                     <div class="col-4 my-6">
                         {{#with contact.email}}
                             <div class="mb-4">
-                                <div class="row">
+                                <div >
                                     <div >
                                         <div class="card-body">
                                             <div>
@@ -371,7 +382,7 @@
                     <div class="col-4 my-6">
                         {{#with coment}}
                             <div class="mb-4">
-                                <div class="row">
+                                <div >
                                     <div >
                                         <div class="card-body">
                                             <div>
@@ -394,7 +405,7 @@
             </div>
 
             {{#with coupon}}
-                <div class="col-12">            
+                <div class="col-8">            
                     <label class="form-label display-4">{{title}}</label>
                     <div>
                         <div class="form-text mb-5">{{ select.availabel_coupon.label}}</div>
@@ -419,7 +430,7 @@
                     <div>
                         {{#with add.friend}}
                             <div class="my-4">
-                                <div class="row">
+                                <div >
                                     <div >
                                         <div class="card-body">
                                             <div>
@@ -442,7 +453,7 @@
                     <div>
                         {{#with add.colleague}}
                             <div class="my-4">
-                                <div class="row">
+                                <div>
                                     <div >
                                         <div class="card-body form-select-sm">
                                             <div>
@@ -461,8 +472,6 @@
                             </div>
                         {{/with}}
                     </div>
-
-
                 </div>
             {{/with}}
             <hr>
@@ -515,21 +524,13 @@
                             </div>
                         {{/with}}
                     </div>
-
-
-
                 {{/with}}
             </div>
-
-
-
         </div>
-
-
     </div>   
             
         
-        <hr>
+    <hr>
        
         
     <footer>
