@@ -59,7 +59,7 @@
                     <hr>
                 </div>
             
-                <div class="col-8">                   
+                <div class="col-4">                   
                     {{#with form}}
                         <div class=" my-2">
                             {{#with input.surname}}
@@ -150,7 +150,7 @@
                     {{/with}}                    
                 </div>
             
-                <div class="col-8">
+                <div class="col-4">
                     {{#with form}} 
                         {{#each switch}}                        
                             <div class="form-check form-switch">
@@ -167,67 +167,8 @@
                 </div>
             
             {{/with}}
-        </div>
-            
-        <div class="col-4">
-            <div class="card">
-                {{#each action_block}}
-                    <div class="mb-3">
-                        <div class="card-body">
-                            <div >
-                                {{#if isSuccess}}
-                                <span class="btn btn-success">{{text}}</span>
-                                {{/if}}
-                            </div>
-                            <div >
-                                {{#if isDanger}}
-                                <span class="btn btn-danger">{{text}}</span>
-                                {{/if}}
-                            </div>
-                            <div >
-                                {{#if isInfo}}
-                                <span class="btn btn-info">{{text}}</span>
-                                {{/if}}
-                            </div>
-                        </div>
-                    </div>
-                {{/each}}
-            </div>
-            
-            <div>
-                <div class="card">
-                    {{#with total}}
-                        <divclass="card-body">
-                            <div class="display-5"><b>{{title}}</b></div><br>
-                            {{#each item_list}}
-                                {{name}}:
-                                {{price}}<br>
-                            {{/each}}
 
-                            {{#each additional_info}}
-                                {{text}}:
-                                {{value}}<br>
-                            {{/each}}
-
-                            {{#with total_price}}
-                                {{text}}:
-                                {{value}}<br>
-                            {{/with}}
-                            
-                            {{#each button}}
-                                {{#if isPrimary}}
-                                    <span class="btn btn-primary mb-1">{{text}}</span>
-                                {{/if}}
-                                {{#if isOutline}}
-                                    <span class="btn btn-outline-primary ">{{text}}</span>
-                                {{/if}}            
-                            {{/each}}
-                    {{/with}}
-                </div>
-            </div>
-        </div>
-
-        <div class="col-8 mb-5">
+            <div class="mb-5">
             {{#with delivery}}
                 <label class="form-label"><p class="display-4">{{title}}</p></label>
                     <div class="card">
@@ -253,8 +194,9 @@
                             </div>
                         </div>
                     </div>
-                    
         
+                    
+
                 <div class="card-body mb-5">
                     {{#each delivery_type}} 
                         <div class="form-check">               
@@ -268,9 +210,9 @@
 
 
                 {{#with payment}}
-                        <div class="form-label "> 
-                        <h6>{{title}}</h6> 
-                        </div>
+                    <div class="form-label "> 
+                    <h6>{{title}}</h6> 
+                    </div>
 
                     {{#each  list}} 
                         <div class="form-check">               
@@ -279,7 +221,7 @@
                             <small> {{description}} </small>
                         </div>
                     {{/each}}
-                
+                    
                 {{/with}}
 
             {{/with}}
@@ -405,7 +347,7 @@
             </div>
 
             {{#with coupon}}
-                <div class="col-8">            
+                <div >            
                     <label class="form-label display-4">{{title}}</label>
                     <div>
                         <div class="form-text mb-5">{{ select.availabel_coupon.label}}</div>
@@ -479,7 +421,7 @@
             <div>
                 {{#with quiz}} 
                     <div class="display-6"> {{title}} </div>
-                        <div class="col-12">
+                        <div class="col-4">
                         <div class="form-label">{{preference.title}}</div>
                         <div class="form-check">               
                             
@@ -527,6 +469,67 @@
                 {{/with}}
             </div>
         </div>
+        </div>
+            
+        <div class="col-4">
+            <div class="card">
+                {{#each action_block}}
+                    <div class="mb-3">
+                        <div class="card-body">
+                            <div >
+                                {{#if isSuccess}}
+                                <span class="btn btn-success">{{text}}</span>
+                                {{/if}}
+                            </div>
+                            <div >
+                                {{#if isDanger}}
+                                <span class="btn btn-danger">{{text}}</span>
+                                {{/if}}
+                            </div>
+                            <div >
+                                {{#if isInfo}}
+                                <span class="btn btn-info">{{text}}</span>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+            
+            <div>
+                <div class="card">
+                    {{#with total}}
+                        <divclass="card-body">
+                            <div class="display-5"><b>{{title}}</b></div><br>
+                            {{#each item_list}}
+                                {{name}}:
+                                {{price}}<br>
+                            {{/each}}
+
+                            {{#each additional_info}}
+                                {{text}}:
+                                {{value}}<br>
+                            {{/each}}
+
+                            {{#with total_price}}
+                                {{text}}:
+                                {{value}}<br>
+                            {{/with}}
+                            
+                            {{#each button}}
+                                {{#if isPrimary}}
+                                    <span class="btn btn-primary mb-1">{{text}}</span>
+                                {{/if}}
+                                {{#if isOutline}}
+                                    <span class="btn btn-outline-primary ">{{text}}</span>
+                                {{/if}}            
+                            {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+
+        
     </div>   
             
         
