@@ -1,0 +1,27 @@
+ {{#each itemList}}                            
+                <div class="card mb-3 col-12">
+                    <div class="carg-body  ">
+                        <div class="col-4 ">
+                            {{number}}
+                            {{status}}
+                        </div>
+                        <br>
+                            {{#with amount}}
+                                {{ title}}
+                                {{ value}}
+                            {{/with}}
+
+                        {{#each images}}  
+                            <img src="{{this}}">
+                        {{/each}}
+
+
+                        {{#with button}}
+                            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                            {{#if isPrimary}}
+                            {{else}}                                    
+                            {{/if}}
+                        {{/with}}
+                    </div>
+                </div>    
+            {{/each}}
