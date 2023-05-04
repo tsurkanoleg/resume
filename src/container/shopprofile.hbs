@@ -215,26 +215,26 @@
                     {{/with}}
                 </div>
 
-                <div class="card ">
+                <div class="card p-2 row">
                     {{#with contacts}} 
-                        <h4 class="m-3">{{title}}</h4>
+                        <h4 class="m-3 col-12">{{title}}</h4>
                         <div class="col-4 ">
                             {{#each contactData}}
                                 <div class="mb-2">
                                     {{title}}<br>
                                     {{value}}<br>
                                         {{#with button}}
-                                            <div class="list-item ">
+                                            <div class="list-item col-4">
                                                 {{#if isPrimary}}
                                                     <a href="{{link}}" class="btn btn-primary ">{{text}}</a>
                                                 {{/if}}
                                             </div>
-                                            <div class="list-item ">
+                                            <div class="list-item col-4">
                                                     {{#if isSecondary}}
                                                     <a href="{{link}}" class="btn btn-outline-secondary">{{text}}</a>
                                                     {{/if}}
                                             </div>
-                                            <div class="list-item ">
+                                            <div class="list-item col-4">
                                                 {{#if isDanger}}
                                                     <a href="{{link}}" class="btn btn-outline-danger ">{{text}}</a>
                                                 {{/if}}
@@ -252,7 +252,7 @@
     </div>
 
    <footer>   
-        <div class="row">
+        <div class="row p-2">
             {{#each footer}}
                 <div class="col-2">
                     {{#each this}}
