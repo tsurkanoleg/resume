@@ -62,19 +62,14 @@
         {{#with goodsOtherBlock}}
             <p class="display-5 text-center">{{title}}</p>
             {{#each cards }}
-                <div class="card p-1 col-4 ">
-                    <div class="card-body ">
-                        <img height="100" src="{{image}}">
-                        <p class="card-title"> {{title}} </p>
-                        <p> {{description}} </p>
-                        {{#if isHot}}
-                            <div class="badge text-bg-warning rounded-pill">isHot</div>
-                            {{else}}                    
-                        {{/if}}
-                        {{#if idNew}}
-                            <div class="badge text-bg-primary rounded-pill">idNew</div>
-                            {{else}}
-                        {{/if}}
+                <div class="col-4 g-3">
+                    <div class="card h-100">
+                        <img src="{{image}}" class="card-img-top" alt="photo">
+                        <div class="card-body">
+                            <h6 class="card-title">{{title}}</h6>
+                            {{#if isHot}} <span class="badge text-bg-warning rounded-pill text-uppercase">Hot!</span>{{/if}}
+                            {{#if idNew}} <span class="badge text-bg-warning rounded-pill">New</span>{{/if}}
+                        </div>
                     </div>
                 </div>
             {{/each}}
