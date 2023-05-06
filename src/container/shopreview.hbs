@@ -103,7 +103,13 @@
         </div>
     </div>
 
-        {{> reviewItem}}
+        <div class="card g-4">
+            {{#each reviewList}} 
+
+            {{> reviewItem}}
+
+            {{/each}}
+        </div>
 
     <div class="  card  text-bg-success ">
         {{#with service}}
