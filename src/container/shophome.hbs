@@ -43,25 +43,13 @@
 
    
     {{#with goodsBlock}}
-        <div class="nav mb-3">           
-            <div class="card-body row">
-                {{#each tabs}}
-                    <div class="nav-tabs col-3">
-                        <div class="nav-item ">                            
-                            {{#if isActive}}
-                            <a href="#" class="nav-link active">{{text}}</a>                            
-                            {{/if}}
-                            
-                            {{#if isDisabled}}
-                            <a href="#" class="nav-link disabled">{{text}}</a>
-                            {{else}}
-                            <a href="#" class="nav-link">{{text}}</a>
-                            {{/if}}                         
-                        </div>
-                    </div>
-                {{/each}}
-            </div>
-        </div>
+        <ul class="nav nav-tabs mb-5">
+            {{#each tabs}} 
+                <li class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}">
+                    {{text}}
+                </li>
+            {{/each}}
+        </ul>
     {{/with}}
 
     <hr>
