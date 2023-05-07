@@ -1,14 +1,14 @@
-<div>
+<div class="m-4">
     <p>
     <h1>Education</h1>
     </p>
 
     {{#with main}}
     <main>
-        <section>
+        <section  class="m-3">
             {{> title data="My educations" big=true}}
 
-            <ul>
+            <ul class="m-3">
                 {{#each education}}
                 <li>
                     {{name}}
@@ -19,7 +19,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="m-3">
             {{> title data="My certificates" big=false}}
             <ul>
                 {{#each certificates}}

@@ -1,7 +1,7 @@
-<div>
+<div class="m-3">
     <main>
         <section>
-            <div>
+            <div class="m-3">
                 {{> title data= "Mac" big=true}}
                 <ul>
                     <li>name:{{name}} </li><br>
@@ -11,11 +11,11 @@
                 </ul>
             </div>
 
-            <div>
-                <ul>
-                    <ul>
+            <div class="m-3">
+                <ul class="m-3">
+                    <ul class="m-3">
                         {{#with  features.processor}}
-                        <div> Processor </div>
+                        <div class="m-3"> Processor </div>
                             <li> brand:{{brand}} </li>
                             <li> model:{{model}} </li>
                             <li> speed:{{speed}} </li>
@@ -24,25 +24,25 @@
                         {{/with}}
                     </ul>
                     <hr>
-                    <ul>
+                    <ul class="m-3">
                         {{#with  features.memory}}
-                        <div>Memory</div>
+                        <div class="m-3">Memory</div>
                             <li> type:{{type}} </li>
                             <li> size:{{size}} </li>
                             <li> speed:{{speed}} </li>
                         {{/with}}
                     </ul>
                     <hr>
-                    <ul>
+                    <ul class="m-3">
                         {{#with  features.storage}}
-                        <div>Storage</div>
+                        <div class="m-3">Storage</div>
                             <li> type:{{type}} </li>
                             <li> size:{{size}} </li>
                         {{/with}}
                     </ul>
                     <hr>
                      {{#with  features.display}} 
-                     <div>Display</div>
+                     <div class="m-3">Display</div>
                         <li> size:{{size}} </li>
                         <li> resolution:{{resolution}} </li>
                         <li> technology:{{technology}} </li>
@@ -52,7 +52,7 @@
                     {{/with}}
                     <hr>
                     {{#with  features.graphics}} 
-                    <div>Graphics</div>
+                    <div class="m-3">Graphics</div>
                         <li> brand:{{brand}} </li>
                         <li> model:{{model}} </li>
                         <li> memory:{{memory}} </li>                        
@@ -60,18 +60,18 @@
                     <hr>
                    
                         {{#each features.ports}}
-                        <div>Ports</div>
+                        <div class="m-3">Ports</div>
                             <li> type:{{type}} </li>
                             <li> count:{{count}} </li>
-                            <ul>
-                                <hr>
+                            <ul class="m-3">
+                               
                                 
-                                <br>
+                                
 
                                 {{#each features}}
                                 
                                     <li>Feature: {{this}} </li>
-                                    <hr>
+                                  
                                 {{/each}}
                             </ul>                            
                         {{/each}}
@@ -79,9 +79,9 @@
                     </ul>
                     
 
-                    <ul>
+                    <ul class="m-3">
                         {{#with features.battery}}
-                        <div> Battery</div>
+                        <div class="m-3"> Battery</div>
                             <li>type: {{type}} </li>
                             <li>capacity: {{capacity}} </li>
                             <li>life: {{life}} </li>
@@ -89,28 +89,32 @@
                     </ul>
 
                     <hr>
-                    {{weight}} <br>
+                    <p class="m-3">{{weight}}</p> <br>
                     {{#with features.dimensions}} 
-                    <div>Dimensions</div>
+                    <div class="m-3">Dimensions</div>
                         <li> height:{{height}} </li>
                         <li> width:{{width}} </li>
                         <li> depth:{{depth}} </li>
                     {{/with}}
                     <hr>
 
-                    {{#with features}}
-                    <li>Operating system:{{operating_system}} </li>
-                    {{/with}}
+                    <ul class="m-3">
+                        {{#with features}}
+                        <li>Operating system:{{operating_system}} </li>
+                        {{/with}}
+                    </ul>
                     
-                    <br>
+                    
 
                     <hr>
 
-                    {{#each features.accessories}} 
-                        <li> name:{{name}} </li>
-                        <li> price:{{price}} </li>
-                        <hr>
-                    {{/each}}
+                    <ul class="m-3">
+                        {{#each features.accessories}}
+                            <li> name:{{name}} </li>
+                            <li> price:{{price}} </li>
+                            <hr>
+                        {{/each}}
+                    </ul>
 
                 </ul>
             </div>

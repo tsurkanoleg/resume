@@ -3246,5 +3246,12 @@ router.get('/bootstrap', function (req, res) {
 // ================================================================
 // ================================================================
 
+router.get('/index8', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    layout:'index',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 // Підключаємо роутер до бек-енду
 module.exports = router

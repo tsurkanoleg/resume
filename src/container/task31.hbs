@@ -112,9 +112,7 @@
             <div>
                 {{#with relaxion}}
                     <p class="display-3"> {{title}} </p>
-    
                     <div class="row gy-2">
-    
                         {{#each cards}}
                             <div class="col-6 g-3">
                                 <div class="card text-bg-secondary">
@@ -126,7 +124,6 @@
                                 </div>
                             </div>
                         {{/each}}
-    
                     </div>
                 {{/with}}
             </div>
@@ -149,10 +146,8 @@
                             </div>
                         </div>
                     {{/each}}
-            </div>
+                </div>
             {{/with}}
-    
-    
     
             <div>
                 {{#with proposition}}
@@ -172,44 +167,42 @@
                     </div>
                 {{/with}}
             </div>
-    
-    
         </div>
     </main>
     
-     <hr>
+     <div>
+         <hr>
+     </div>
     
     <footer>
-        <div>
-            {{#with footer}}
-                <h5> {{title}} </h5>
-    
-                <div class="row">
-                    <div class="card col-3">
-                        <div class="card-body col-3  ">
-                            {{#each navigation}}
-                                <a href="{{href}}"><button class="btn btn-link"> {{text}} </button></a>
-                            {{/each}}
+        {{#with footer}}
+            <h5> {{title}} </h5>
+
+            <div class="row">
+                <div class="col-4">
+                    {{#each navigation}}
+                        <div class=" m-2">
+                            <a href="{{href}}" class="btn btn-link"> {{text}}</a>
                         </div>
-                    </div>
-    
-                    <div class="card col-3">
-                        <div class="card-body col-3  ">
-                            {{#each socialMedia}}
-                                <a href="{{link}}"><button class="btn btn-outline-dark"> {{name}} </button></a>
-                            {{/each}}
-                        </div>
-                    </div>
-    
-                    <div class="card col-3">
-                        <div class="card-body col-3 ">
-                            {{#each partners}}
-                                <a href="{{link}}"><button class="btn btn-outline-info"> {{name}} </button></a>
-                            {{/each}}
-                        </div>
-                    </div>
+                    {{/each}}
                 </div>
-            {{/with}}
-        </div>
+                
+                <div class="col-4">
+                    {{#each socialMedia}}
+                        <div class=" m-2">
+                            <a href="{{link}}" class="btn btn-outline-dark"> {{name}}</a>
+                        </div>
+                    {{/each}}
+                </div>
+
+                <div class="col-4">
+                    {{#each partners}}
+                        <div class=" m-2">
+                            <a href="{{link}}" class="btn btn-outline-info "> {{name}}</a>
+                        </div>
+                    {{/each}}
+                </div>                  
+            </div>
+        {{/with}}
     </footer>
 </div>

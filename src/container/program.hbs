@@ -1,15 +1,15 @@
-<div>
+<div class="m-4">
     <main>
         <section>
             {{> title data= "My program" big=true}}
 
-            <div|>
+            <div class="m-3">
                 <ul>                    
                     {{#with program.excursion}}
-                            <li>{{name}}</li>
+                            <li class="m-3">{{name}}</li>
                             <hr>
                                 {{#with location}}
-                                    <ul>
+                                    <ul class="m-3">
                                         <li>{{city}}</li>
                                         <li>{{country}}</li>
                                     </ul>
@@ -17,19 +17,19 @@
                                 <hr>
 
                             <li>{{date}}</li>
-                            <ul>
+                            <ul class="m-3">
                                 {{#each program}}
-                                    <div>
+                                    <div class="m-3">
                                         <li> {{name}} </li>
                                         <li> {{type}} </li>
                                         <li> {{duration}} </li>
                                         <hr>
 
-                                        <ul>
+                                        <ul class="m-3">
                                             {{#with details}}
                                                 {{#with museum}}
                                                     <li> {{name}} </li>
-                                                    <ul>
+                                                    <ul class="m-3">
                                                         {{#with location}}
                                                             <li>{{address}}</li>
                                                             <li>{{city}}</li>
@@ -37,30 +37,36 @@
                                                         {{/with}}
                                                     </ul>
                                                     <hr>
-                                                    <ul>
+                                                    <ul class="m-3">
                                                         {{#each exhibits}}
                                                             <li> {{name}} </li>
+                                                            {{#if artist}}
                                                             <li> {{artist}} </li>
+                                                            {{else}}
+                                                            {{/if}}
+
                                                             <li> {{description}} </li>
+                                                            
                                                             <li> {{audio_guide}} </li>
+                                                            
                                                             <hr>
                                                         {{/each}}
                                                     </ul>                                                    
                                                 {{/with}}
-                                                <ul>
+                                                <ul class="m-3">
                                                     {{#with guide}} 
                                                         <li> {{name}} </li>
                                                         <li> {{language}} </li>
                                                         <li> {{rating}} </li>
                                                     {{/with}}
                                                 </ul>
-                                                <hr>
+                                               
                                             {{/with}}
-                                            <ul>
+                                            <ul class="m-3">
                                                 {{#with details}}
                                                     {{#with venue}}
                                                         <li> {{name}} </li>
-                                                        <ul>
+                                                        <ul class="m-3">
                                                            {{#with location}} 
                                                             <li> {{address}} </li>
                                                             <li> {{city}} </li>
@@ -69,7 +75,7 @@
                                                         </ul>
                                                     {{/with}}
                                                     <hr>
-                                                    <ul>
+                                                    <ul class="m-3">
                                                         {{#each performers}}
                                                             <li> {{name}} </li>
                                                             <li> {{type}} </li>
@@ -77,7 +83,7 @@
                                                         {{/each}}                                                        
                                                     </ul>
 
-                                                    <ul>
+                                                    <ul class="m-3">
                                                     {{#with guide2}} 
                                                         <li> {{name}} </li>
                                                         <li> {{language}} </li>
@@ -96,7 +102,7 @@
                     {{/with}}                    
                 </ul> 
 
-                <ul>
+                <ul class="m-3">
                     {{#each contributions}}
                         <li> {{title}} </li>
                         <li> {{description}} </li>
