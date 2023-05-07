@@ -3204,7 +3204,7 @@ router.get('/bootstrap', function (req, res) {
 // ================================================================
 
 
-router.get('/index8', function (req, res) {
+router.get('/index', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('index8', {
     layout:'index',
