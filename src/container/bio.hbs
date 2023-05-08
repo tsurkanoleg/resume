@@ -5,33 +5,37 @@
 
 <div>
 
-    <main>
+    <main class="m-4">
         <section>
             {{> title data= "Bio" big=true}}
 
             <div>
                 <ul>
+                    <div class="mb-3">
+                        <li>{{name}}</li>
+                        <li>{{birthdate}}</li>
+                        <li>{{birthplace}}</li>
+                        <li>{{deathdate}}</li>
+                        <li>{{deathplace}}</li>
+                        <li>{{nationality}}</li>
+                        <li>{{occupation}}</li>
+                    </div>
 
-                    <li>{{name}}</li>
-                    <li>{{birthdate}}</li>
-                    <li>{{birthplace}}</li>
-                    <li>{{deathdate}}</li>
-                    <li>{{deathplace}}</li>
-                    <li>{{nationality}}</li>
-                    <li>{{occupation}}</li>
+                    <div>
+                        <hr>
+                    </div>
+                    
 
-                    <hr>
-                    <br>
-
-                    <ul>
+                    <ul class="mb-3">
                         {{#each known_for}}
                         <li>{{this}}</li>
                         {{/each}}
                     </ul>
                 </ul>
-                <hr>
-                <br>
-                <ul>
+                    <div>
+                        <hr>
+                    </div>
+                <ul class="mb-3">
                     {{#each education}}
                     <li>{{degree}}</li>
                     <li>{{field}}</li>
@@ -39,8 +43,8 @@
                     <li>{{year}}</li>
                     {{/each}}
                 </ul>
-                <br>
-                <ul>
+                
+                <ul class="mb-3">
                     {{#each notable_publications}}
                     <li>{{title}}</li>
                     <li>{{year}}</li>
@@ -49,10 +53,12 @@
                     {{/each}}
                 </ul>
 
-                <hr>
-                <br>
+                <div>
+                    <hr>
+                </div>
+                
 
-                <ul>
+                <ul class="mb-3">
                     {{#each partners}}
                     <li> {{name}} </li>
                     <li> {{relationship}} </li>
@@ -61,10 +67,11 @@
                     {{/each}}
                 </ul>
 
-                <hr>
-                <br>
-
-                <ul>
+                <div>
+                    <hr>
+                </div>
+               
+                <ul class="mb-3"> 
                     {{#each awards}}
                     <li> {{title}} </li>
                     <li> {{year}} </li>
@@ -72,34 +79,41 @@
                     {{/each}}
                 </ul>
 
-                <hr>
-                <br>
+                <div>
+                    <hr>
+                </div>
 
-                <ul>
+                <ul class="mb-3">
                     {{#each influences}}
                     <li> {{this}} </li>
                     {{/each}}
                 </ul>
 
-                <hr>
-                <br>
-                <ul>
+                <div>
+                    <hr>
+                </div>
+
+                <ul  class="mb-3">
                     {{#each influenced}}
                     <li> {{this}} </li>
                     {{/each}}
                 </ul>
 
-                <hr>
-                <ul>
+                <div>
+                    <hr>
+                </div>
+
+                <ul class="mb-3">
                     {{#each quotes}}
                     <li> {{this}} </li>
                     {{/each}}
                 </ul>
 
-                <hr>
-                <br>
+                <div>
+                    <hr>
+                </div>
 
-               <ul>
+               <ul  class="mb-3">
 
                     {{#each major_discoveries}}
                     <li> {{title}} </li>
@@ -108,25 +122,21 @@
                     {{/each}}
                 </ul>
 
-                <hr>
-                <br>
+                <div>
+                    <hr>
+                </div>
+                
                 <ul>
-                    {{#each contributions}}
+                    {{#with contributions}}
                     <li> {{title}} </li>
                     <li> {{description}} </li>
                     <li> {{year}} </li>
                     <li> {{field}} </li>
-                    {{/each}}
+                    {{/with}}
                 </ul>
-
-                <hr>
-
             </div>
         </section>
-
     </main>
-
-
 </div>
 
 

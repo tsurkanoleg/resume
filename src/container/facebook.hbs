@@ -1,11 +1,11 @@
-<div>
+<div class="m-4">
     <main>
-        <section>
+        <section class="m-3">
             {{> title data= "Facebook" big=true}}
 
-            {{name}} <br>
+            <strong>{{name}}</strong> <br>
             
-            <ul>
+            <ul class="m-3">
 
                 <hr>
                 <div>users</div>
@@ -16,38 +16,38 @@
                     <li>{{age}}</li>
 
                     <hr>
-                    <br>
-                    <ul>
+                    
+                    <ul class="m-3">
                         {{#each friends}}
                             <div>Friends</div>
-                            <br>
+                            
                             <li>id:{{id}}</li>
                             <li>name:{{name}}</li>
                             <li>gender:{{gender}}</li>
                             <li>age:{{age}}</li>
                             <hr>
-                            <br>
-                            <ul>
+                           
+                            <ul class="m-3">
                                 {{#each mutual_friends}}
                                     <div>Mutual friends</div>
-                                    <br>
+                                   
                                     <li>id:{{id}}</li>
                                     <li>name:{{name}}</li>
                                     <li>gender:{{gender}}</li>
                                     <li>age:{{age}}</li>
                                     <hr>
-                                    <br>
+                                    
                                         {{#each mutual_friends}}
                                             <div>Mutual friends</div>
-                                            <br>
-                                            <ul>
+                                            
+                                            <ul class="m-3">
                                                 <li>id:{{id}}</li>
                                                 <li>name:{{name}}</li>
                                                 <li>gender:{{gender}}</li>
                                                 <li>age:{{age}}</li>
                                             </ul>
                                             <hr>
-                                            <br>                                        
+                                                                                   
                                         {{/each}}
                                 {{/each}}
                                 <ul>
@@ -55,16 +55,16 @@
 
                         {{#each groups}}
                             <div>Groups</div>
-                            <br>
+                           
                                 <li>id:{{id}}</li>
                                 <li>name:{{name}}</li>
                                 <li>description:{{description}}</li>
-                                <ul>
+                                <ul class="m-3">
                                     <hr>
-                                    <br>
+                                   
                                     {{#each members}} 
-                                        <div>Members</div>
-                                        <br>
+                                        <div class="m-3">Members</div>
+                                        
                                         <li>id:{{id}}</li>
                                         <li>name:{{name}}</li>
                                         <li>gender:{{gender}}</li>
@@ -77,7 +77,7 @@
                                         <li>{{gender}}</li>
                                         <li>{{age}}</li>
                                         <hr>                                        
-                                        <ul>
+                                        <ul class="m-3">
                                             <div>mutual_friends</div>
                                             {{#each mutual_friends}}
                                             <li>{{id}}</li>
@@ -97,7 +97,7 @@
                                     <li>{{name}}</li>
                                     <li>{{description}}</li>
                                     <hr>
-                                        <ul>
+                                        <ul class="m-3">
                                             <div>members</div>
                                             {{#each members}}
                                                 <li>{{id}}</li>
@@ -119,21 +119,20 @@
                     </ul>
 
 
-                    <hr>
-                    <br>
-                    <ul>
+                   
+                    <ul class="m-3">
                         {{#each groups}}
-                            <div>Groups</div>
-                            <br>
+                            <div class="m-3">Groups</div>
+                           
                                 <li>id:{{id}}</li>
                                 <li>name:{{name}}</li>
                                 <li>description:{{description}}</li>
-                                <ul>
+                                <ul class="m-3">
                                     <hr>
-                                    <br>
+                                   
                                     {{#each members}} 
-                                        <div>Members</div>
-                                        <br>
+                                        <div class="m-3">Members</div>
+                                        
                                         <li>id:{{id}}</li>
                                         <li>name:{{name}}</li>
                                         <li>gender:{{gender}}</li>

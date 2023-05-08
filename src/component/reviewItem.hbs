@@ -1,52 +1,49 @@
+<div class="card mb-5 g-3">
+    <div class="card-body">
+        {{#with title}}
+            <small><b>{{userName}}</b></small>
+            <small>{{caption}}</small>
+            <small>{{date}}</small>
+        {{/with}}
+    </div>
+</div>
 
+<div class="card-body mb-4 g-3">
+    {{#with reviewBody}}
+        {{#with seller}} 
+            <small>{{title}}:</small>
+            <small>{{value}}</small><br>
+        {{/with}}
 
-        <div class="card mb-5 g-3">
-            <div class="card-body">
-                {{#with title}}
+        {{#with rating}} 
+            <small>{{title}}:</small>
+            <small>{{value}}</small><br>
+        {{/with}}
+
+        {{#each text}} {{this}} <br> {{/each}}
+
+        {{#with advantages}} 
+            <small><b>{{title}}</b></small><br>
+            <p>{{text}}</p><br>
+        {{/with}}
+
+        {{#with disadvantages}} 
+            <small><b>{{title}}</b></small><br>
+            <p>{{text}}</p ><br>
+        {{/with}}
+
+        {{#each images}} <img src="{{this}}" class="mb-3"> {{/each}} 
+            
+        <br>
+
+        <div>
+            {{#each coments}}
+                <div  class="card card-body my-2">
                     <small><b>{{userName}}</b></small>
-                    <small>{{caption}}</small>
                     <small>{{date}}</small>
-                {{/with}}
-            </div>
-        </div>
-
-        <div class="card-body mb-4 g-3">
-            {{#with reviewBody}}
-                {{#with seller}} 
-                    <small>{{title}}:</small>
-                    <small>{{value}}</small><br>
-                {{/with}}
-
-                {{#with rating}} 
-                    <small>{{title}}:</small>
-                    <small>{{value}}</small><br>
-                {{/with}}
-
-                {{#each text}} {{this}} <br> {{/each}}
-
-                {{#with advantages}} 
-                    <small><b>{{title}}</b></small><br>
-                    <p>{{text}}</p><br>
-                {{/with}}
-
-                {{#with disadvantages}} 
-                    <small><b>{{title}}</b></small><br>
-                    <p>{{text}}</p ><br>
-                {{/with}}
-
-                {{#each images}} <img src="{{this}}" class="mb-3"> {{/each}} 
-                    
-                <br>
-
-                <div>
-                    {{#each coments}}
-                        <div  class="card card-body my-2">
-                            <small><b>{{userName}}</b></small>
-                            <small>{{date}}</small>
-                            <p>{{text}}</p>
-                        </div>
-                    {{/each}}
+                    <p>{{text}}</p>
                 </div>
-            {{/with}}            
+            {{/each}}
         </div>
-    
+    {{/with}}            
+</div>

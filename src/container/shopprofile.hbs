@@ -73,8 +73,11 @@
             {{/with}}
         </diw>
 
-           {{> purchaseItem}}
-
+            <div>
+                {{#each itemList}}
+                    {{> purchaseItem}}
+                {{/each}}                
+            </div>
         {{/with}}
     </section>
 

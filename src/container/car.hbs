@@ -1,20 +1,22 @@
 <div> 
-    <main>
+    <main class="m-4">
         <section>
             {{> title data= "Car" big=true}}
 
-            <ul>
+            <ul class="mb-3">
                 <li>make:{{make}}</li>
                 <li>model:{{model}}</li>
                 <li>year:{{year}}</li>
                 <li>color:{{color}}</li>
             </ul>
 
-            <hr>
+            <div>
+                <hr>
+            </div>
             
             <div>
                 <ul>
-                    <ul>
+                    <ul  class="mb-3">
                         {{#with features.interior.seats}}
                         <div>Seats</div>
                         <li>material: {{ material}} </li>
@@ -23,8 +25,12 @@
                         <li> ventilated:{{ventilated}} </li>
                         {{/with}}
                     </ul>
-                    <hr>
-                    <ul>
+
+                    <div>
+                        <hr>
+                    </div>
+
+                    <ul  class="mb-3">
                         {{#with features.interior.dashboard}}
                         <div>Dashboard</div>
                         <li> material:{{ material}} </li>
@@ -40,7 +46,7 @@
                         {{/with}}
                     </ul>
                     <hr>
-                    <ul>
+                    <ul  class="mb-3">
                         {{#with features.interior.audio}}
                         <div>Audio</div>
                             <li> system:{{system}} </li>
@@ -51,9 +57,12 @@
                         {{/with}}
                     </ul>
                 
-                     <hr>
+                     <div>
+                         <hr>
+                     </div>
+
                     {{#with features.exterior}}
-                        <ul>
+                        <ul  class="mb-3">
                             {{#with wheels}}
                             <div>Exterior</div>
                                 <li> size:{{size}} </li>
@@ -61,8 +70,12 @@
                                 <li> color:{{color}} </li>
                             {{/with}}
                         </ul>
-                        <hr>
-                        <ul>
+
+                        <div>
+                            <hr>
+                        </div>
+
+                        <ul  class="mb-3">
                             {{#with headlights}}
                             <div>Headlights</div>
                                 <li> type:{{type}} </li>
@@ -70,8 +83,10 @@
                                 <li> automatic:{{automatic}} </li>
                             {{/with}}
                         </ul>
-                        <hr>
-                        <ul>
+                        <div>
+                            <hr>
+                        </div>
+                        <ul  class="mb-3">
                             {{#with sunroof}}
                             <div>Sunroof</div>
                                 <li> type:{{type}} </li>
@@ -80,10 +95,13 @@
                             {{/with}}
                         </ul>
                     {{/with}}
-                     <hr>
-                     <hr>
+                   
+                     <div>
+                         <hr>
+                     </div>
+
                     {{#with features.safety}}
-                        <ul>
+                        <ul class="mb-3">
                             {{#with airbags}}
                             <div>Airbags</div>
                                 <li> front:{{front}} </li>
@@ -92,8 +110,12 @@
                                 <li> rear:{{rear}} </li>
                             {{/with}}
                         </ul>
-                        <hr>
-                         <ul>
+
+                        <div>
+                            <hr>
+                        </div>
+
+                         <ul class="mb-3">
                             {{#with assistance}}
                              <div>Assistance</div>
                                 <li>Blind spot monitoring:{{blind_spot_monitoring}} </li>
@@ -104,18 +126,22 @@
                             {{/with}}
                          </ul>
                     {{/with}}
-                    <hr>
+
+                    <div>
+                        <hr>
+                    </div>
+
                 </ul>
             </div>
             
-                <ul>
+                <ul class="mb-3">
                     {{#with engine}}
                     <div>Engine</div>
                         <li> type:{{type}} </li>
                         <li> displacement:{{displacement}} </li>
                         <li> horsepower:{{horsepower}} </li>
                         <li> torque:{{torque}} </li>
-                        <ul>
+                        <ul class="mb-3">
                             {{#with transmission}}
                             <div>Transmission</div>
                                 <li> type:{{type}} </li>
@@ -125,9 +151,11 @@
                     {{/with}}
                 </ul>
 
-                <hr>
+                <div>
+                    <hr>
+                </div>
 
-                <ul>
+                <ul class="mb-3">
                     {{#with fuel_economy}}
                     <div>Fuel economy</div>
                         <li> city:{{city}} </li>
@@ -136,22 +164,24 @@
                     {{/with}}
                 </ul>
                 
-                <hr>
+                <div>
+                    <hr>
+                </div>
 
-                 <ul>
+                 <ul class="mb-3">
                     {{#with price}}
                     <div>Price</div>
                         <li> base:{{base}} </li>
                         <li> destination:{{destination}} </li>
                         <ul>
                             {{#with options}}
-                            <div>Options</div>
+                            <div>Options</div class="mb-3">
                                 <li>navigation: {{navigation}} </li>
                                 <li> moonroof:{{moonroof}} </li>
                                 <li>premium_paint: {{premium_paint}} </li>
                             {{/with}}
                         </ul>
-                        <p> <b> {{total}} </b> </p>
+                        <p> <b> Total: {{total}} </b> </p>
                     {{/with}}
                  </ul>        
         </section>
